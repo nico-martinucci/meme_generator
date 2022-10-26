@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Creepster&family=Fredoka+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Generate a Meme!</h1>
+    </header>
+    <form id="generate-new-meme">
+        <label for="picture-url">Link to picture: 
+            <input type="text" name="picture-url" class="full-width-input">
+        </label>
+        <label for="image-options-input">(or choose from the list:)
+            <input list="image-options-list" name="image-options-input" class="full-width-input">
+            <datalist id="image-options-list">
+                <option value="You Don't Say"></option>
+                <option value="Facepalm">
+                <option value="Grumpy Cat">
+                <option value="Success Kid">
+                <option value="Scumbag Steve">
+                <option value="First World Problems">
+                <option value="Strutting Leo">
+            </datalist>
+        </label>
+        <label for="top-text">Top text: 
+            <input type="text" name="top-text" class="full-width-input">
+        </label>
+        <label for="bottom-text">Bottom text: 
+            <input type="text" name="bottom-text" class="full-width-input">
+        </label>
+        <label for="font-selector-input">Select a custom font:
+            <input list="font-selector-list" name="font-selector-input" class="full-width-input">
+            <datalist id="font-selector-list">
+                <option value="Anton">
+                <option value="Bungee">
+                <option value="Creepster">
+                <option value="Fredoka One">
+                <option value="Permanent Marker">
+            </datalist>
+        </label>
+        <p></p>
+        <div class="centered-input-items">
+            <label for="text-color">Text color:
+                <input type="color" name="text-color" value="#FFFFFF">
+            </label>
+            <p></p>
+            <label for="top-text-size">Top text size:
+                <input type="range" name="top-text-size" min="10" max="80" value="40">
+            </label>
+            <label for="bottom-text-size">Bottom text size:
+                <input type="range" name="bottom-text-size" min="10" max="80" value="40">
+            </label>    
+        </div>
+        <p></p>
+        <div class="buttons">
+            <button id="save-button">Save</button>
+            <button id="save-reset-button">Save & Reset</button>
+            <button id="reset-button">Reset</button>    
+        </div>
+        <p></p>
+    </form>
+    <p></p>
+    <section id="working-meme" class="meme">
+        <p></p>
+        <span class="meme-text top-text">TOP TEXT</span>
+        <span class="meme-text bottom-text">BOTTOM TEXT</span>
+        <img class="meme-image"src="yds_defaultimage.jpg">
+    </section>
+    <hr>
+    <div id="generated-memes-header">
+        <h2>Saved Memes</h2>
+        <p>click on the "delete" button to remove a meme</p>
+    </div>
+    <section id="generated-memes">
+        
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
